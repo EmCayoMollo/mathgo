@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mathgo/nivelesMenu/aritmetica/aritmeticaMenu.dart';
 import 'package:mathgo/nivelesMenu/nivelesMenu.dart';
 
 class NivelSuperado extends StatelessWidget {
@@ -30,10 +31,8 @@ class NivelSuperado extends StatelessWidget {
                   height: 1,
                 ),
               ),
-
-              const SizedBox(height: 30), // Añade un espacio
-
-              // --- BOTÓN SIGUIENTE NIVEL ---
+              const SizedBox(height: 30),
+              // BOTÓN SIGUIENTE NIVEL
               TextButton(
                 style: TextButton.styleFrom(
                   backgroundColor: Colors.green,
@@ -53,9 +52,26 @@ class NivelSuperado extends StatelessWidget {
                 ),
               ),
 
-              const SizedBox(height: 20), // Añade un espacio
-
-              // --- BOTÓN SALIR AL MENÚ ---
+              const SizedBox(height: 20),
+              TextButton(
+                style: TextButton.styleFrom(
+                  backgroundColor: Colors.blueGrey,
+                  foregroundColor: Colors.white,
+                  padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+                ),
+                onPressed: () {
+                  Navigator.pushAndRemoveUntil(
+                    context,
+                    MaterialPageRoute(builder: (context) => const AritmeticaMenu()),
+                        (Route<dynamic> route) => false,
+                  );
+                },
+                child: const Text(
+                  'volver a menu ejercicos',
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                ),
+              ),
+              const SizedBox(height: 20),
               TextButton(
                 style: TextButton.styleFrom(
                   backgroundColor: Colors.blueGrey,
@@ -71,7 +87,7 @@ class NivelSuperado extends StatelessWidget {
                   );
                 },
                 child: const Text(
-                  'Salir',
+                  'Salir al menu niveles',
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                 ),
               )
