@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:mathgo/nivelesMenu//nivelesMenu.dart';
 import 'package:flutter/services.dart';
@@ -29,26 +28,25 @@ class HomeMenu extends StatelessWidget {
         child: Column(
           children: [
             const SizedBox(height: 50,),
-            Image.asset('assets/images/logomejorado.png'),
+            Expanded(child: Image.asset('assets/images/logomejorado.png')),
             TextButton.icon(
               icon: const Icon(Icons.play_circle_fill, size: 40),
               label: const Text(
-                'Jugar',
+                'Jugar  ',
                 style: TextStyle(
                     fontSize: 30,
                     fontWeight: FontWeight.bold,
                 ),
               ),
               style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.all(Colors.green),
-                foregroundColor: MaterialStateProperty.all(Colors.black),
-                side: MaterialStateProperty.all(const BorderSide(color: Colors.black)),
-                shape: MaterialStateProperty.all(RoundedRectangleBorder(
-                                                  borderRadius: BorderRadius.circular(20),
-                                                                        )
-                                                  ),
-                elevation: MaterialStateProperty.all(8.0),
-                shadowColor: MaterialStateProperty.all(Colors.black),
+                backgroundColor: WidgetStateColor.resolveWith((states)=>Colors.green),
+                foregroundColor: WidgetStateColor.resolveWith((states)=>Colors.black),
+                side: WidgetStatePropertyAll(const BorderSide(color: Colors.black)),
+                shape: WidgetStatePropertyAll(RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20),
+                )),
+                elevation: WidgetStatePropertyAll(8.0),
+                shadowColor: WidgetStatePropertyAll(Colors.black),
               ),
               onPressed: (){
                 Navigator.push(context,
@@ -60,21 +58,21 @@ class HomeMenu extends StatelessWidget {
             TextButton.icon(
               icon: const Icon(Icons.settings, size: 40),
               label: const Text(
-                'Configurar',
+                'Configurar  ',
                 style: TextStyle(
                   fontSize: 30,
                   fontWeight: FontWeight.bold,
                 ),
               ),
               style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.all(Colors.blue),
-                foregroundColor: MaterialStateProperty.all(Colors.black),
-                side: MaterialStateProperty.all(const BorderSide(color: Colors.black)),
-                shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                backgroundColor: WidgetStateColor.resolveWith((states)=>Colors.blue),
+                foregroundColor: WidgetStateColor.resolveWith((states)=>Colors.black),
+                side: WidgetStatePropertyAll(const BorderSide(color: Colors.black)),
+                shape: WidgetStatePropertyAll(RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(20),
                 )),
-                elevation: MaterialStateProperty.all(8.0),
-                shadowColor: MaterialStateProperty.all(Colors.black),
+                elevation: WidgetStatePropertyAll(8.0),
+                shadowColor: WidgetStatePropertyAll(Colors.black),
               ),
               onPressed: (){},
             ),
@@ -82,21 +80,21 @@ class HomeMenu extends StatelessWidget {
             TextButton.icon(
               icon: const Icon(Icons.cancel, size: 40),
               label: const Text(
-                'Salir',
+                'Salir  ',
                 style: TextStyle(
                   fontSize: 30,
                   fontWeight: FontWeight.bold,
                 ),
               ),
               style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.all(Colors.red),
-                foregroundColor: MaterialStateProperty.all(Colors.black),
-                side: MaterialStateProperty.all(const BorderSide(color: Colors.black)),
-                shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                backgroundColor: WidgetStateColor.resolveWith((states)=>Colors.red),
+                foregroundColor: WidgetStateColor.resolveWith((states)=>Colors.black),
+                side: WidgetStatePropertyAll(const BorderSide(color: Colors.black)),
+                shape: WidgetStatePropertyAll(RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(20),
                 )),
-                elevation: MaterialStateProperty.all(8.0),
-                shadowColor: MaterialStateProperty.all(Colors.black),
+                elevation: WidgetStatePropertyAll(8.0),
+                shadowColor: WidgetStatePropertyAll(Colors.black),
               ),
               onPressed: (){
                 SystemNavigator.pop();

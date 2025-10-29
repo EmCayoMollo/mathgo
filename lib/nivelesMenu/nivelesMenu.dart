@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:mathgo/menu/homeMenu.dart';
+import 'package:mathgo/nivelesMenu/algebra/algebraMenu.dart';
 import 'package:mathgo/nivelesMenu/aritmetica/aritmeticaMenu.dart';
+import 'package:mathgo/nivelesMenu/fracciones/fraccionesmenu.dart';
 
 class NivelesMenu extends StatelessWidget {
   const NivelesMenu({super.key});
@@ -56,12 +58,12 @@ class NivelesMenu extends StatelessWidget {
                   backgroundColor: WidgetStateColor.resolveWith((states)=>(Colors.deepOrange)),
                   foregroundColor: WidgetStateColor.resolveWith((states)=>(Colors.black)),
                   side: const WidgetStatePropertyAll(BorderSide(color: Colors.black)),
-                  shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                  shape: WidgetStatePropertyAll(RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20),
                   )
                   ),
-                  elevation: MaterialStateProperty.all(8.0),
-                  shadowColor: MaterialStateProperty.all(Colors.black),
+                  elevation: WidgetStatePropertyAll(8),
+                  shadowColor: WidgetStatePropertyAll(Colors.black),
                 ),
                 onPressed: (){
                   Navigator.push(    context,
@@ -79,17 +81,21 @@ class NivelesMenu extends StatelessWidget {
                     )
                 ),
                 style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all(Colors.deepOrangeAccent),
-                  foregroundColor: MaterialStateProperty.all(Colors.black),
-                  side: MaterialStateProperty.all(const BorderSide(color: Colors.black)),
-                  shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                  backgroundColor: WidgetStateColor.resolveWith((states)=>(Colors.deepOrange)),
+                  foregroundColor: WidgetStateColor.resolveWith((states)=>(Colors.black)),
+                  side: WidgetStatePropertyAll(const BorderSide(color: Colors.black)),
+                  shape: WidgetStatePropertyAll(RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20),
                   )
                   ),
-                  elevation: MaterialStateProperty.all(8.0),
-                  shadowColor: MaterialStateProperty.all(Colors.black),
+                  elevation: WidgetStatePropertyAll(8.0),
+                  shadowColor: WidgetStatePropertyAll(Colors.black),
                 ),
-                onPressed: (){},
+                onPressed: (){
+                  Navigator.push(    context,
+                    MaterialPageRoute(builder: (context) => const FraccionesMenu()),
+                  );
+                },
               ),
               const SizedBox(height: 20,),
               TextButton.icon(
@@ -101,15 +107,19 @@ class NivelesMenu extends StatelessWidget {
                     ),
                 ),
                 style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all(Colors.deepOrangeAccent),
-                    foregroundColor: MaterialStateProperty.all(Colors.black),
-                    side: MaterialStateProperty.all(const BorderSide(color: Colors.black)),
-                    shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                    backgroundColor: WidgetStateColor.resolveWith((states)=>(Colors.deepOrange)),
+                    foregroundColor: WidgetStateColor.resolveWith((states)=>(Colors.black)),
+                    side: WidgetStatePropertyAll(const BorderSide(color: Colors.black)),
+                    shape: WidgetStatePropertyAll(RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20),
                     )
                     ),
                     ),
-                onPressed: (){},
+                onPressed: (){
+                  Navigator.push(    context,
+                    MaterialPageRoute(builder: (context) => const AlgebraMenu()),
+                  );
+                },
               )
 
             ]
