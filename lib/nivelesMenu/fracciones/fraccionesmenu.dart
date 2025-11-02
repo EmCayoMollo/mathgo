@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:mathgo/nivelesMenu/aritmetica/ejercicio10.dart';
-import 'package:mathgo/nivelesMenu/aritmetica/ejercicio3.dart';
-import 'package:mathgo/nivelesMenu/aritmetica/ejercicio4.dart';
-import 'package:mathgo/nivelesMenu/aritmetica/ejercicio6.dart';
-import 'package:mathgo/nivelesMenu/aritmetica/ejercicio7.dart';
-import 'package:mathgo/nivelesMenu/aritmetica/ejercicio8.dart';
-import 'package:mathgo/nivelesMenu/aritmetica/ejercicio9.dart';
-import 'package:mathgo/nivelesMenu/aritmetica/ejercicio1.dart';
-import 'package:mathgo/nivelesMenu/aritmetica/ejercicio2.dart';
 import 'package:mathgo/nivelesMenu/nivelesMenu.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import '../aritmetica/ejercicio5.dart';
+import 'package:mathgo/nivelesMenu/fracciones/ejercicio1.dart';
+import 'package:mathgo/nivelesMenu/fracciones/ejercicio2.dart';
+import 'package:mathgo/nivelesMenu/fracciones/ejercicio3.dart';
+import 'package:mathgo/nivelesMenu/fracciones/ejercicio4.dart';
+import 'package:mathgo/nivelesMenu/fracciones/ejercicio5.dart';
+import 'package:mathgo/nivelesMenu/fracciones/ejercicio6.dart';
+import 'package:mathgo/nivelesMenu/fracciones/ejercicio7.dart';
+import 'package:mathgo/nivelesMenu/fracciones/ejercicio8.dart';
+import 'package:mathgo/nivelesMenu/fracciones/ejercicio9.dart';
+import 'package:mathgo/nivelesMenu/fracciones/ejercicio10.dart';
+
 
 class FraccionesMenu extends StatefulWidget {
   const FraccionesMenu({super.key});
@@ -93,13 +94,13 @@ class _FraccionesMenuState extends State<FraccionesMenu> {
                 ListTile(
                   title: Center(
                     child: Text(
-                      _nivelesCompletados['suma2']== true? 'Ejercicio 2' : 'Ejercicio 2',
+                      _nivelesCompletados['ejercicio2']== true? 'Ejercicio 2' : 'Ejercicio 2',
                       style: TextStyle(
                           fontSize: 30,
                           fontWeight: FontWeight.bold),
                     ),
                   ),
-                  trailing: _nivelesCompletados['suma2']==true
+                  trailing: _nivelesCompletados['ejercicio2']==true
                       ? const Icon(Icons.check_circle, color: Colors.green)
                       : null ,
                   onTap: () {

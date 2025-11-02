@@ -9,12 +9,10 @@ class NivelesMenu extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // para evitar el cierre automático de la pantalla envuelve el Scaffold en un PopScope
     return PopScope(
-      canPop: false, // Para evitar el cierre automático de la pantalla
+      canPop: false,
       onPopInvokedWithResult: (bool didPop, dynamic result) {
         if (didPop) return;
-        // Para navegar a HomeMenu y limpiar las pantallas anteriores
         Navigator.pushAndRemoveUntil(
           context,
           MaterialPageRoute(builder: (context) => const HomeMenu()),

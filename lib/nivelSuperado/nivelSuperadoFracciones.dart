@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:mathgo/nivelesMenu/algebra/algebraMenu.dart';
+import 'package:mathgo/nivelesMenu/fracciones/fraccionesmenu.dart';
 import 'package:mathgo/nivelesMenu/nivelesMenu.dart';
 
-class NivelSuperadoAlgebra extends StatelessWidget {
+class NivelSuperadoFracciones extends StatelessWidget {
   final Widget siguienteNivel;
 
-  const NivelSuperadoAlgebra({
+  const NivelSuperadoFracciones({
     super.key,
     required this.siguienteNivel,
   });
@@ -57,7 +57,7 @@ class NivelSuperadoAlgebra extends StatelessWidget {
                 onPressed: () {
                   Navigator.pushAndRemoveUntil(
                     context,
-                    MaterialPageRoute(builder: (context) => const AlgebraMenu()),
+                    MaterialPageRoute(builder: (context) => const FraccionesMenu()),
                         (Route<dynamic> route) => false,
                   );
                 },
