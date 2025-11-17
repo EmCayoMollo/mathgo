@@ -145,7 +145,6 @@ class _Ejercicio4State extends State<Ejercicio4> {
                   );
                   return;
                 }
-
                 if (numRespuesta == _numeradorCorrecto && denRespuesta == _denominadorCorrecto) {
                   _marcarCompletado();
                   Navigator.push(

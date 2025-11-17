@@ -1,17 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:mathgo/nivelesMenu/aritmetica/ejercicio10.dart';
-import 'package:mathgo/nivelesMenu/aritmetica/ejercicio3.dart';
-import 'package:mathgo/nivelesMenu/aritmetica/ejercicio4.dart';
-import 'package:mathgo/nivelesMenu/aritmetica/ejercicio6.dart';
-import 'package:mathgo/nivelesMenu/aritmetica/ejercicio7.dart';
-import 'package:mathgo/nivelesMenu/aritmetica/ejercicio8.dart';
-import 'package:mathgo/nivelesMenu/aritmetica/ejercicio9.dart';
-import 'package:mathgo/nivelesMenu/aritmetica/ejercicio1.dart';
-import 'package:mathgo/nivelesMenu/aritmetica/ejercicio2.dart';
+import 'package:mathgo/nivelesMenu/algebra/ejercicio1.dart';
+import 'package:mathgo/nivelesMenu/algebra/ejercicio2.dart';
+import 'package:mathgo/nivelesMenu/algebra/ejercicio3.dart';
+import 'package:mathgo/nivelesMenu/algebra/ejercicio4.dart';
+import 'package:mathgo/nivelesMenu/algebra/ejercicio5.dart';
+import 'package:mathgo/nivelesMenu/algebra/ejercicio6.dart';
+import 'package:mathgo/nivelesMenu/algebra/ejercicio7.dart';
+import 'package:mathgo/nivelesMenu/algebra/ejercicio8.dart';
+import 'package:mathgo/nivelesMenu/algebra/ejercicio9.dart';
+import 'package:mathgo/nivelesMenu/algebra/ejercicio10.dart';
 import 'package:mathgo/nivelesMenu/nivelesMenu.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-
-import '../aritmetica/ejercicio5.dart';
 
 
 class AlgebraMenu extends StatefulWidget {
@@ -76,13 +75,13 @@ class _AlgebraMenuState extends State<AlgebraMenu> {
                 ListTile(
                   title: Center(
                     child: Text(
-                      _nivelesCompletados['suma1']== true? 'Ejercicio 1' : 'Ejercicio 1',
+                      _nivelesCompletados['ejercicio1']== true? 'Ejercicio 1' : 'Ejercicio 1',
                       style: TextStyle(
-                          fontSize: 30,
+                          fontSize: 40,
                           fontWeight: FontWeight.bold),
                     ),
                   ),
-                  trailing: _nivelesCompletados['suma1']==true
+                  trailing: _nivelesCompletados['ejercicio1']==true
                       ? const Icon(Icons.check_circle, color: Colors.green)
                       : null ,
                   onTap: () {
@@ -95,13 +94,13 @@ class _AlgebraMenuState extends State<AlgebraMenu> {
                 ListTile(
                   title: Center(
                     child: Text(
-                      _nivelesCompletados['suma2']== true? 'Ejercicio 2' : 'Ejercicio 2',
+                      _nivelesCompletados['ejercicio2']== true? 'Ejercicio 2' : 'Ejercicio 2',
                       style: TextStyle(
-                          fontSize: 30,
+                          fontSize: 40,
                           fontWeight: FontWeight.bold),
                     ),
                   ),
-                  trailing: _nivelesCompletados['suma2']==true
+                  trailing: _nivelesCompletados['ejercicio2']==true
                       ? const Icon(Icons.check_circle, color: Colors.green)
                       : null ,
                   onTap: () {
@@ -116,7 +115,7 @@ class _AlgebraMenuState extends State<AlgebraMenu> {
                     child: Text(
                       _nivelesCompletados['ejercicio3']==true? 'Ejercicio 3' : 'Ejercicio 3',
                       style: TextStyle(
-                        fontSize: 30,
+                        fontSize: 40,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -136,7 +135,7 @@ class _AlgebraMenuState extends State<AlgebraMenu> {
                     child: Text(
                       _nivelesCompletados['ejercicio4']==true? 'Ejercicio 4' : 'Ejercicio 4',
                       style: TextStyle(
-                        fontSize: 30,
+                        fontSize: 40,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -156,7 +155,7 @@ class _AlgebraMenuState extends State<AlgebraMenu> {
                     child: Text(
                       _nivelesCompletados['ejercicio5']==true? 'Ejercicio 5' : 'Ejercicio 5',
                       style: TextStyle(
-                        fontSize: 30,
+                        fontSize: 40,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -176,7 +175,7 @@ class _AlgebraMenuState extends State<AlgebraMenu> {
                     child: Text(
                       _nivelesCompletados['ejercicio6']==true? 'Ejercicio 6' : 'Ejercicio 6',
                       style: TextStyle(
-                        fontSize: 30,
+                        fontSize: 40,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -196,7 +195,7 @@ class _AlgebraMenuState extends State<AlgebraMenu> {
                     child: Text(
                       _nivelesCompletados['ejercicio7']==true? 'Ejercicio 7' : 'Ejercicio 7',
                       style: TextStyle(
-                        fontSize: 30,
+                        fontSize: 40,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -216,7 +215,7 @@ class _AlgebraMenuState extends State<AlgebraMenu> {
                     child: Text(
                       _nivelesCompletados['ejercicio8']==true? 'Ejercicio 8' : 'Ejercicio 8',
                       style: TextStyle(
-                        fontSize: 30,
+                        fontSize: 40,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -236,7 +235,7 @@ class _AlgebraMenuState extends State<AlgebraMenu> {
                     child: Text(
                       _nivelesCompletados['ejercicio9']==true? 'Ejercicio 9' : 'Ejercicio 9',
                       style: TextStyle(
-                        fontSize: 30,
+                        fontSize: 40,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -256,7 +255,7 @@ class _AlgebraMenuState extends State<AlgebraMenu> {
                     child: Text(
                       _nivelesCompletados['ejercicio10']==true? 'Ejercicio 10' : 'Ejercicio 10',
                       style: TextStyle(
-                        fontSize: 30,
+                        fontSize: 40,
                         fontWeight: FontWeight.bold,
                       ),
                     ),

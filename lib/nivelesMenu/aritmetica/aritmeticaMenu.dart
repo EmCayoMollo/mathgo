@@ -77,7 +77,7 @@ class _AritmeticaMenuState extends State<AritmeticaMenu> {
                   child: Text(
                     _nivelesCompletados['suma1']== true? 'Ejercicio 1' : 'Ejercicio 1',
                     style: TextStyle(
-                        fontSize: 30,
+                        fontSize: 40,
                         fontWeight: FontWeight.bold),
                   ),
                 ),
@@ -96,7 +96,7 @@ class _AritmeticaMenuState extends State<AritmeticaMenu> {
                   child: Text(
                     _nivelesCompletados['suma2']== true? 'Ejercicio 2' : 'Ejercicio 2',
                     style: TextStyle(
-                        fontSize: 30,
+                        fontSize: 40,
                         fontWeight: FontWeight.bold),
                   ),
                 ),
@@ -115,7 +115,7 @@ class _AritmeticaMenuState extends State<AritmeticaMenu> {
                   child: Text(
                     _nivelesCompletados['ejercicio3']==true? 'Ejercicio 3' : 'Ejercicio 3',
                     style: TextStyle(
-                      fontSize: 30,
+                      fontSize: 40,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
@@ -135,7 +135,7 @@ class _AritmeticaMenuState extends State<AritmeticaMenu> {
                   child: Text(
                     _nivelesCompletados['ejercicio4']==true? 'Ejercicio 4' : 'Ejercicio 4',
                     style: TextStyle(
-                      fontSize: 30,
+                      fontSize: 40,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
@@ -155,7 +155,7 @@ class _AritmeticaMenuState extends State<AritmeticaMenu> {
                   child: Text(
                     _nivelesCompletados['ejercicio5']==true? 'Ejercicio 5' : 'Ejercicio 5',
                     style: TextStyle(
-                      fontSize: 30,
+                      fontSize: 40,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
@@ -175,7 +175,7 @@ class _AritmeticaMenuState extends State<AritmeticaMenu> {
                   child: Text(
                     _nivelesCompletados['ejercicio6']==true? 'Ejercicio 6' : 'Ejercicio 6',
                     style: TextStyle(
-                      fontSize: 30,
+                      fontSize: 40,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
@@ -195,7 +195,7 @@ class _AritmeticaMenuState extends State<AritmeticaMenu> {
                   child: Text(
                     _nivelesCompletados['ejercicio7']==true? 'Ejercicio 7' : 'Ejercicio 7',
                     style: TextStyle(
-                      fontSize: 30,
+                      fontSize: 40,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
@@ -215,7 +215,7 @@ class _AritmeticaMenuState extends State<AritmeticaMenu> {
                   child: Text(
                     _nivelesCompletados['ejercicio8']==true? 'Ejercicio 8' : 'Ejercicio 8',
                     style: TextStyle(
-                      fontSize: 30,
+                      fontSize: 40,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
@@ -235,7 +235,7 @@ class _AritmeticaMenuState extends State<AritmeticaMenu> {
                   child: Text(
                     _nivelesCompletados['ejercicio9']==true? 'Ejercicio 9' : 'Ejercicio 9',
                     style: TextStyle(
-                      fontSize: 30,
+                      fontSize: 40,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
@@ -255,7 +255,7 @@ class _AritmeticaMenuState extends State<AritmeticaMenu> {
                   child: Text(
                     _nivelesCompletados['ejercicio10']==true? 'Ejercicio 10' : 'Ejercicio 10',
                     style: TextStyle(
-                      fontSize: 30,
+                      fontSize: 40,
                       fontWeight: FontWeight.bold,
                     ),
                   ),

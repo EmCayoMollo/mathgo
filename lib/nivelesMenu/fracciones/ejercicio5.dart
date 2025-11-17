@@ -23,8 +23,6 @@ class _Ejercicio5State extends State<Ejercicio5> {
   final String _numeradorCorrecto2 = '3';
   final String _denominadorCorrecto2 = '4';
 
-
-
   Future<void> _marcarCompletado() async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.setBool('fraccion1', true);
