@@ -57,6 +57,7 @@ class _AritmeticaMenuState extends State<AritmeticaMenu> {
       },
       child: Scaffold(
         appBar: AppBar(
+          backgroundColor: Colors.transparent,
           title: const Text('Aritmetica Menu'),
           leading: IconButton(
             icon: const Icon(Icons.arrow_back),
@@ -75,13 +76,13 @@ class _AritmeticaMenuState extends State<AritmeticaMenu> {
               ListTile(
                 title: Center(
                   child: Text(
-                    _nivelesCompletados['suma1']== true? 'Ejercicio 1' : 'Ejercicio 1',
+                    _nivelesCompletados['ejercicio1']== true? 'Ejercicio 1' : 'Ejercicio 1',
                     style: TextStyle(
                         fontSize: 40,
                         fontWeight: FontWeight.bold),
                   ),
                 ),
-                trailing: _nivelesCompletados['suma1']==true
+                trailing: _nivelesCompletados['ejercicio1']==true
                 ? const Icon(Icons.check_circle, color: Colors.green)
                 : null ,
                 onTap: () {

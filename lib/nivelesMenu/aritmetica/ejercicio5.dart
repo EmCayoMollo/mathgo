@@ -85,7 +85,7 @@ class _Ejercicio5State extends State<Ejercicio5> {
                             color: Colors.red,
                             child: Center(
                                 child: Text(
-                                  '2×(5-3)',
+                                  '2×(5-3)=',
                                   style: TextStyle(
                                     fontSize: 40,
                                     fontWeight: FontWeight.bold,

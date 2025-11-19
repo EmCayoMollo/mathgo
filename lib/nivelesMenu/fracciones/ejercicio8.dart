@@ -24,7 +24,7 @@ class _Ejercicio8State extends State<Ejercicio8> {
 
   Future<void> _marcarCompletado() async {
     final prefs = await SharedPreferences.getInstance();
-    await prefs.setBool('fraccion1', true);
+    await prefs.setBool('fraccion8', true);
   }
 
 
@@ -66,7 +66,7 @@ class _Ejercicio8State extends State<Ejercicio8> {
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
                 decoration: BoxDecoration(
-                  color: Colors.black12,
+                  color: Colors.white,
                   borderRadius: BorderRadius.circular(10),
                   border: Border.all(
                       color: Colors.black,

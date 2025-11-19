@@ -17,7 +17,7 @@ class _Ejercicio2State extends State<Ejercicio2> {
   final String _resultadoCorrecto= '17';
   Future<void> _marcarCompletado() async{
     final prefs = await SharedPreferences.getInstance();
-    await prefs.setBool('suma2', true);
+    await prefs.setBool('ejercicio2', true);
   }
 
   @override
@@ -87,7 +87,8 @@ class _Ejercicio2State extends State<Ejercicio2> {
                 ),
               ),
               const SizedBox(height: 20,),
-              TextButton(onPressed: () {
+              TextButton(
+                onPressed: () {
                 if (_resultadoSeleccionado == null) {
                   ScaffoldMessenger.of(context).showSnackBar(
                     const SnackBar(
@@ -129,7 +130,7 @@ class _Ejercicio2State extends State<Ejercicio2> {
                   foregroundColor: WidgetStateColor.resolveWith((states) => Colors.black),
                 ),
               ),
-
+              const SizedBox(height: 30,),
             ],
           ),
         ),

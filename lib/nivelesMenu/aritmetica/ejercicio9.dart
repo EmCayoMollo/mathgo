@@ -17,7 +17,7 @@ class _Ejercicio9State extends State<Ejercicio9> {
   final String _resultadoCorrecto= '17';
   Future<void> _marcarCompletado() async{
     final prefs = await SharedPreferences.getInstance();
-    await prefs.setBool('ejercicio6', true);
+    await prefs.setBool('ejercicio9', true);
   }
 
   @override
@@ -129,7 +129,7 @@ class _Ejercicio9State extends State<Ejercicio9> {
                   foregroundColor: WidgetStateColor.resolveWith((states) => Colors.black),
                 ),
               ),
-
+              const SizedBox(height: 30,),
             ],
           ),
         ),

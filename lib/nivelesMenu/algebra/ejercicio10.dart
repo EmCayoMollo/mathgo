@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:mathgo/nivelSuperado/final.dart';
-import 'package:mathgo/nivelSuperado/nivelSuperadoAlgebra.dart';
 import 'package:mathgo/nivelesMenu/algebra/algebraMenu.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -32,7 +31,7 @@ class _Ejercicio10State extends State<Ejercicio10> {
 
   Future<void> _marcarCompletado() async{
     final prefs = await SharedPreferences.getInstance();
-    await prefs.setBool('suma2', true);
+    await prefs.setBool('alg10', true);
   }
 
   @override
@@ -68,7 +67,7 @@ class _Ejercicio10State extends State<Ejercicio10> {
               Container(
                 padding: EdgeInsets.all(10),
                 alignment: Alignment.topCenter,
-                height: 400,
+                height: 360,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
                   color: Colors.white,
@@ -96,7 +95,7 @@ class _Ejercicio10State extends State<Ejercicio10> {
                             key: const ValueKey('numero1'),
                             controller: _numeroController1,
                             textAlign: TextAlign.center,
-                            keyboardType: TextInputType.number,
+                            keyboardType: TextInputType.text,
                             decoration: InputDecoration(border: OutlineInputBorder(), hintText: '?',contentPadding: EdgeInsets.zero),
                           ),
                         ),
@@ -108,7 +107,7 @@ class _Ejercicio10State extends State<Ejercicio10> {
                             key: const ValueKey('numero2'),
                             controller: _numeroController2,
                             textAlign: TextAlign.center,
-                            keyboardType: TextInputType.number,
+                            keyboardType: TextInputType.text,
                             decoration: InputDecoration(border: OutlineInputBorder(), hintText: '?',contentPadding: EdgeInsets.zero),
                           ),
                         ),
@@ -131,7 +130,7 @@ class _Ejercicio10State extends State<Ejercicio10> {
                             key: const ValueKey('numero3'),
                             controller: _numeroController3,
                             textAlign: TextAlign.center,
-                            keyboardType: TextInputType.number,
+                            keyboardType: TextInputType.text,
                             decoration: InputDecoration(border: OutlineInputBorder(), hintText: '?',contentPadding: EdgeInsets.zero),
                           ),
                         ),
@@ -275,7 +274,7 @@ class _Ejercicio10State extends State<Ejercicio10> {
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
                 ),),
-              )
+              ),
             ],
           ),
         ),

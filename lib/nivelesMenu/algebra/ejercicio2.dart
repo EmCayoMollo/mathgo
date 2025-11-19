@@ -28,7 +28,7 @@ class _Ejercicio2State extends State<Ejercicio2> {
 
   Future<void> _marcarCompletado() async{
     final prefs = await SharedPreferences.getInstance();
-    await prefs.setBool('suma2', true);
+    await prefs.setBool('alg2', true);
   }
 
   @override
@@ -214,7 +214,8 @@ class _Ejercicio2State extends State<Ejercicio2> {
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
                 ),),
-              )
+              ),
+              const SizedBox(height: 30,),
             ],
           ),
         ),

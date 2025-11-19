@@ -57,6 +57,7 @@ class _FraccionesMenuState extends State<FraccionesMenu> {
       },
       child: Scaffold(
         appBar: AppBar(
+          backgroundColor: Colors.transparent,
           title: const Text('Fracciones Menu'),
           leading: IconButton(
             icon: const Icon(Icons.arrow_back),
@@ -75,13 +76,13 @@ class _FraccionesMenuState extends State<FraccionesMenu> {
                 ListTile(
                   title: Center(
                     child: Text(
-                      _nivelesCompletados['suma1']== true? 'Ejercicio 1' : 'Ejercicio 1',
+                      _nivelesCompletados['fraccion1']== true? 'Ejercicio 1' : 'Ejercicio 1',
                       style: TextStyle(
                           fontSize: 40,
                           fontWeight: FontWeight.bold),
                     ),
                   ),
-                  trailing: _nivelesCompletados['suma1']==true
+                  trailing: _nivelesCompletados['fraccion1']==true
                       ? const Icon(Icons.check_circle, color: Colors.green)
                       : null ,
                   onTap: () {
@@ -94,13 +95,13 @@ class _FraccionesMenuState extends State<FraccionesMenu> {
                 ListTile(
                   title: Center(
                     child: Text(
-                      _nivelesCompletados['ejercicio2']== true? 'Ejercicio 2' : 'Ejercicio 2',
+                      _nivelesCompletados['fraccion2']== true? 'Ejercicio 2' : 'Ejercicio 2',
                       style: TextStyle(
                           fontSize: 40,
                           fontWeight: FontWeight.bold),
                     ),
                   ),
-                  trailing: _nivelesCompletados['ejercicio2']==true
+                  trailing: _nivelesCompletados['fraccion2']==true
                       ? const Icon(Icons.check_circle, color: Colors.green)
                       : null ,
                   onTap: () {
@@ -113,14 +114,14 @@ class _FraccionesMenuState extends State<FraccionesMenu> {
                 ListTile(
                   title: Center(
                     child: Text(
-                      _nivelesCompletados['ejercicio3']==true? 'Ejercicio 3' : 'Ejercicio 3',
+                      _nivelesCompletados['fraccion3']==true? 'Ejercicio 3' : 'Ejercicio 3',
                       style: TextStyle(
                         fontSize: 40,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
                   ),
-                  trailing: _nivelesCompletados['ejercicio3']==true
+                  trailing: _nivelesCompletados['fraccion3']==true
                       ? const Icon(Icons.check_circle, color: Colors.green)
                       : null ,
                   onTap: () {
@@ -133,14 +134,14 @@ class _FraccionesMenuState extends State<FraccionesMenu> {
                 ListTile(
                   title: Center(
                     child: Text(
-                      _nivelesCompletados['ejercicio4']==true? 'Ejercicio 4' : 'Ejercicio 4',
+                      _nivelesCompletados['fraccion4']==true? 'Ejercicio 4' : 'Ejercicio 4',
                       style: TextStyle(
                         fontSize: 40,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
                   ),
-                  trailing: _nivelesCompletados['ejercicio4']==true
+                  trailing: _nivelesCompletados['fraccion4']==true
                       ? const Icon(Icons.check_circle, color: Colors.green)
                       : null ,
                   onTap: () {
@@ -153,14 +154,14 @@ class _FraccionesMenuState extends State<FraccionesMenu> {
                 ListTile(
                   title: Center(
                     child: Text(
-                      _nivelesCompletados['ejercicio5']==true? 'Ejercicio 5' : 'Ejercicio 5',
+                      _nivelesCompletados['fraccion5']==true? 'Ejercicio 5' : 'Ejercicio 5',
                       style: TextStyle(
                         fontSize: 40,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
                   ),
-                  trailing: _nivelesCompletados['ejercicio5']==true
+                  trailing: _nivelesCompletados['fraccion5']==true
                       ? const Icon(Icons.check_circle, color: Colors.green)
                       : null ,
                   onTap: () {
@@ -173,14 +174,14 @@ class _FraccionesMenuState extends State<FraccionesMenu> {
                 ListTile(
                   title: Center(
                     child: Text(
-                      _nivelesCompletados['ejercicio6']==true? 'Ejercicio 6' : 'Ejercicio 6',
+                      _nivelesCompletados['fraccion6']==true? 'Ejercicio 6' : 'Ejercicio 6',
                       style: TextStyle(
                         fontSize: 40,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
                   ),
-                  trailing: _nivelesCompletados['ejercicio6']==true
+                  trailing: _nivelesCompletados['fraccion6']==true
                       ? const Icon(Icons.check_circle, color: Colors.green)
                       : null ,
                   onTap: () {
@@ -193,14 +194,14 @@ class _FraccionesMenuState extends State<FraccionesMenu> {
                 ListTile(
                   title: Center(
                     child: Text(
-                      _nivelesCompletados['ejercicio7']==true? 'Ejercicio 7' : 'Ejercicio 7',
+                      _nivelesCompletados['fraccion7']==true? 'Ejercicio 7' : 'Ejercicio 7',
                       style: TextStyle(
                         fontSize: 40,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
                   ),
-                  trailing: _nivelesCompletados['ejercicio7']==true
+                  trailing: _nivelesCompletados['fraccion7']==true
                       ? const Icon(Icons.check_circle, color: Colors.green)
                       : null ,
                   onTap: () {
@@ -213,14 +214,14 @@ class _FraccionesMenuState extends State<FraccionesMenu> {
                 ListTile(
                   title: Center(
                     child: Text(
-                      _nivelesCompletados['ejercicio8']==true? 'Ejercicio 8' : 'Ejercicio 8',
+                      _nivelesCompletados['fraccion8']==true? 'Ejercicio 8' : 'Ejercicio 8',
                       style: TextStyle(
                         fontSize: 40,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
                   ),
-                  trailing: _nivelesCompletados['ejercicio8']==true
+                  trailing: _nivelesCompletados['fraccion8']==true
                       ? const Icon(Icons.check_circle, color: Colors.green)
                       : null ,
                   onTap: () {
@@ -233,14 +234,14 @@ class _FraccionesMenuState extends State<FraccionesMenu> {
                 ListTile(
                   title: Center(
                     child: Text(
-                      _nivelesCompletados['ejercicio9']==true? 'Ejercicio 9' : 'Ejercicio 9',
+                      _nivelesCompletados['fraccion9']==true? 'Ejercicio 9' : 'Ejercicio 9',
                       style: TextStyle(
                         fontSize: 40,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
                   ),
-                  trailing: _nivelesCompletados['ejercicio9']==true
+                  trailing: _nivelesCompletados['fraccion9']==true
                       ? const Icon(Icons.check_circle, color: Colors.green)
                       : null ,
                   onTap: () {
@@ -253,14 +254,14 @@ class _FraccionesMenuState extends State<FraccionesMenu> {
                 ListTile(
                   title: Center(
                     child: Text(
-                      _nivelesCompletados['ejercicio10']==true? 'Ejercicio 10' : 'Ejercicio 10',
+                      _nivelesCompletados['fraccion10']==true? 'Ejercicio 10' : 'Ejercicio 10',
                       style: TextStyle(
                         fontSize: 40,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
                   ),
-                  trailing: _nivelesCompletados['ejercicio10']==true
+                  trailing: _nivelesCompletados['fraccion10']==true
                       ? const Icon(Icons.check_circle, color: Colors.green)
                       : null ,
                   onTap: () {

@@ -18,10 +18,10 @@ class _Ejercicio1State extends State<Ejercicio1> {
   final respuesta3 = TextEditingController();
   final resultadoCorrecto1=14;
   final resultadoCorrecto2=6;
-  final resultadoCorrecto3=9;
+  final resultadoCorrecto3=15;
   Future<void> _marcarComoCompletado() async{
     final prefs = await SharedPreferences.getInstance();
-    await prefs.setBool('suma1', true);
+    await prefs.setBool('ejercicio1', true);
   }
 
   @override

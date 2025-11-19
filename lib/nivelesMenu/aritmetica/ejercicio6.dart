@@ -38,7 +38,7 @@ class _Ejercicio6State extends State<Ejercicio6> {
           },
               icon: const Icon(Icons.arrow_back, )
           ),
-          title: const Text('Ejercicio 2'),
+          title: const Text('Ejercicio 6'),
         ),
         body: Center(
           child: Column(
@@ -87,7 +87,8 @@ class _Ejercicio6State extends State<Ejercicio6> {
                 ),
               ),
               const SizedBox(height: 20,),
-              TextButton(onPressed: () {
+              TextButton(
+                onPressed: () {
                 if (_resultadoSeleccionado == null) {
                   ScaffoldMessenger.of(context).showSnackBar(
                     const SnackBar(
@@ -129,7 +130,7 @@ class _Ejercicio6State extends State<Ejercicio6> {
                   foregroundColor: WidgetStateColor.resolveWith((states) => Colors.black),
                 ),
               ),
-
+              const SizedBox(height: 30,),
             ],
           ),
         ),

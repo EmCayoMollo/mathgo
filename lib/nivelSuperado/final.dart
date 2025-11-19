@@ -15,15 +15,34 @@ class _FinalState extends State<Final> {
       canPop: false,
       onPopInvokedWithResult: (bool didPop,dynamic result){},
       child: Scaffold(
-        body: Column(
-          children: [
-            Text('fin',style: TextStyle(fontSize: 50,fontWeight: FontWeight.bold),),
-            TextButton(
-                onPressed: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>NivelesMenu()));
-                },
-                child: Text('volver',style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),))
-          ],
+        body: Container(
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage("assets/images/fondo.png"),
+              fit: BoxFit.cover,
+            ),
+          ),
+          child: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text('FIN',style: TextStyle(fontSize: 100,color: Colors.black,fontWeight: FontWeight.bold),),
+                TextButton(
+                    onPressed: (){
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => NivelesMenu()),
+                      );
+                    },
+                    child: Text('Volver a Menu',style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
+                    style: TextButton.styleFrom(
+                      backgroundColor: Colors.green,
+                      foregroundColor: Colors.black,
+                    )
+                )
+              ],
+            ),
+          ),
         ),
       ),
     );
