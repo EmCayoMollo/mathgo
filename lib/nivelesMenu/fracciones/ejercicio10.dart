@@ -56,270 +56,273 @@ class _Ejercicio10State extends State<Ejercicio10> {
           title: const Text('Ejercicio 10'),
         ),
         body: Center(
-          child: Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Expanded(child: Image.asset('assets/images/profetxt.png')),
-                const SizedBox(height: 10,),
-                Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(10),
-                    border: Border.all(
-                        color: Colors.black,
-                        width: 3
+          child: SingleChildScrollView(
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Image.asset('assets/images/profetxt.png'),
+                  const SizedBox(height: 10,),
+                  Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(10),
+                      border: Border.all(
+                          color: Colors.black,
+                          width: 3
+                      ),
+                    ),
+                    child: Column(
+                      children: [
+                        Row(
+                          mainAxisSize: MainAxisSize.min,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                              child: Text('(', style: TextStyle(fontSize: 50, fontWeight: FontWeight.bold)),
+                            ),
+                            Column(
+                              children: const [
+                                Text('5', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+                                SizedBox(width: 40, child: Divider(color: Colors.black, thickness: 2)),
+                                Text('6', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+                              ],
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                              child: Text('-', style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold)),
+                            ),
+                            Column(
+                              children: const [
+                                Text('1', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+                                SizedBox(width: 40, child: Divider(color: Colors.black, thickness: 2)),
+                                Text('3', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+                              ],
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                              child: Text(')', style: TextStyle(fontSize: 60, fontWeight: FontWeight.bold,)),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                              child: Text('÷', style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold)),
+                            ),
+                            Column(
+                              children: const [
+                                Text('2', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+                                SizedBox(width: 40, child: Divider(color: Colors.black, thickness: 2)),
+                                Text('5', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+                              ],
+                            ),
+                          ],
+                        ),
+                        const SizedBox(height: 10,),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                              child: Text('(', style: TextStyle(fontSize: 60, fontWeight: FontWeight.bold)),
+                            ),
+                            SizedBox(
+                              width: 80,
+                              child: Column(
+                                children: [
+                                  Row(
+                                    children: [
+                                      Expanded(
+                                        child: TextField(
+                                          key: const ValueKey('numerador2'),
+                                          controller: _numeradorController2,
+                                          textAlign: TextAlign.center,
+                                          keyboardType: TextInputType.number,
+                                          decoration: const InputDecoration(border: OutlineInputBorder(), hintText: '?', contentPadding: EdgeInsets.zero),
+                                        ),
+                                      ),
+                                      const Text(' - ',style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
+                                      Expanded(
+                                        child: TextField(
+                                          key: const ValueKey('numerador3'),
+                                          controller: _numeradorController3,
+                                          textAlign: TextAlign.center,
+                                          keyboardType: TextInputType.number,
+                                          decoration: const InputDecoration(border: OutlineInputBorder(), hintText: '?', contentPadding: EdgeInsets.zero),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  const Divider(color: Colors.black, thickness: 2, height: 10),
+                                  TextField(
+                                    key: const ValueKey('denominador2'),
+                                    controller: _denominadorController2,
+                                    textAlign: TextAlign.center,
+                                    keyboardType: TextInputType.number,
+                                    decoration: const InputDecoration(border: OutlineInputBorder(), hintText: '?', contentPadding: EdgeInsets.zero),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                              child: Text(')', style: TextStyle(fontSize: 60, fontWeight: FontWeight.bold)),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                              child: Text('÷', style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold)),
+                            ),
+                            Column(
+                              children: const [
+                                Text('2', style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold)),
+                                SizedBox(width: 40, child: Divider(color: Colors.black, thickness: 2)),
+                                Text('5', style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold)),
+                              ],
+                            ),
+                          ],
+                        ),
+                        const SizedBox(height: 10,),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            SizedBox(
+                              width: 50,
+                              child: Column(
+                                children: [
+                                  TextField(
+                                    key: const ValueKey('numerador1'),
+                                    controller: _numeradorController1,
+                                    textAlign: TextAlign.center,
+                                    keyboardType: TextInputType.number,
+                                    decoration: const InputDecoration(border: OutlineInputBorder(), hintText: '?', contentPadding: EdgeInsets.zero),
+                                  ),
+                                  const Divider(color: Colors.black, thickness: 2, height: 10),
+                                  TextField(
+                                    key: const ValueKey('denominador1'),
+                                    controller: _denominadorController1,
+                                    textAlign: TextAlign.center,
+                                    keyboardType: TextInputType.number,
+                                    decoration: const InputDecoration(border: OutlineInputBorder(), hintText: '?', contentPadding: EdgeInsets.zero),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                              child: Text('÷', style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold)),
+                            ),
+                            Column(
+                              children: const [
+                                Text('2', style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold)),
+                                SizedBox(width: 40, child: Divider(color: Colors.black, thickness: 2)),
+                                Text('5', style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold)),
+                              ],
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                              child: Text('=', style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold)),
+                            ),
+                            SizedBox(
+                              width: 50,
+                              child: Column(
+                                children: [
+                                  TextField(
+                                    key: const ValueKey('numerador4'),
+                                    controller: _numeradorController4,
+                                    textAlign: TextAlign.center,
+                                    keyboardType: TextInputType.number,
+                                    decoration: const InputDecoration(border: OutlineInputBorder(), hintText: '?', contentPadding: EdgeInsets.zero),
+                                  ),
+                                  const Divider(color: Colors.black, thickness: 2, height: 10),
+                                  TextField(
+                                    key: const ValueKey('denominador3'),
+                                    controller: _denominadorController3,
+                                    textAlign: TextAlign.center,
+                                    keyboardType: TextInputType.number,
+                                    decoration: const InputDecoration(border: OutlineInputBorder(), hintText: '?', contentPadding: EdgeInsets.zero),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
+                        )
+                      ],
                     ),
                   ),
-                  child: Column(
-                    children: [
-                      Row(
-                        mainAxisSize: MainAxisSize.min,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Padding(
-                            padding: EdgeInsets.symmetric(horizontal: 16.0),
-                            child: Text('(', style: TextStyle(fontSize: 60, fontWeight: FontWeight.bold)),
+                  const SizedBox(height: 20,),
+                  TextButton(
+                    onPressed: () {
+                      final numRespuesta1 = int.tryParse(_numeradorController1.text);
+                      final denRespuesta1 = int.tryParse(_denominadorController1.text);
+                      final numRespuesta2 = int.tryParse(_numeradorController2.text);
+                      final denRespuesta2 = int.tryParse(_denominadorController2.text);
+                      final numRespuesta3 = int.tryParse(_numeradorController3.text);
+                      final denRespuesta3 = int.tryParse(_denominadorController3.text);
+                      final numRespuesta4 = int.tryParse(_numeradorController4.text);
+
+
+
+                      if (
+                      numRespuesta1 == null ||
+                          numRespuesta2 == null ||
+                          numRespuesta3 == null ||
+                          numRespuesta4 == null ||
+                          denRespuesta1 == null ||
+                          denRespuesta2 == null ||
+                          denRespuesta3 == null
+                      ) {
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          const SnackBar(
+                            content: Text('Por favor, completa la fracción con números válidos.'),
+                            backgroundColor: Colors.orange,
                           ),
-                          Column(
-                            children: const [
-                              Text('5', style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold)),
-                              SizedBox(width: 40, child: Divider(color: Colors.black, thickness: 2)),
-                              Text('6', style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold)),
-                            ],
+                        );
+                        return;
+                      }
+
+                      if (numRespuesta1 == _numeradorCorrecto1
+                          && numRespuesta2 == _numeradorCorrecto2
+                          && numRespuesta3 == _numeradorCorrecto3
+                          && numRespuesta4 == _numeradorCorrecto4
+                          && denRespuesta1 == _denominadorCorrecto1
+                          && denRespuesta2 == _denominadorCorrecto2
+                          && denRespuesta3 == _denominadorCorrecto3
+                      ) {
+                        _marcarCompletado();
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => const NivelSuperadoFracciones(
+                            siguienteNivel: AlgebraMenu(),
+                          )),
+                        );
+                      }
+                      else {
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          const SnackBar(
+                            content: Text('Respuesta incorrecta. ¡Inténtalo de nuevo!'),
+                            backgroundColor: Colors.red,
                           ),
-                          Padding(
-                            padding: EdgeInsets.symmetric(horizontal: 16.0),
-                            child: Text('-', style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold)),
-                          ),
-                          Column(
-                            children: const [
-                              Text('1', style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold)),
-                              SizedBox(width: 40, child: Divider(color: Colors.black, thickness: 2)),
-                              Text('3', style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold)),
-                            ],
-                          ),
-                          Padding(
-                            padding: EdgeInsets.symmetric(horizontal: 16.0),
-                            child: Text(')', style: TextStyle(fontSize: 60, fontWeight: FontWeight.bold,)),
-                          ),
-                          Padding(
-                            padding: EdgeInsets.symmetric(horizontal: 16.0),
-                            child: Text('÷', style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold)),
-                          ),
-                          Column(
-                            children: const [
-                              Text('2', style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold)),
-                              SizedBox(width: 40, child: Divider(color: Colors.black, thickness: 2)),
-                              Text('5', style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold)),
-                            ],
-                          ),
-                        ],
-                      ),
-                      const SizedBox(height: 10,),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Padding(
-                            padding: EdgeInsets.symmetric(horizontal: 16.0),
-                            child: Text('(', style: TextStyle(fontSize: 60, fontWeight: FontWeight.bold)),
-                          ),
-                          SizedBox(
-                            width: 80,
-                            child: Column(
-                              children: [
-                                Row(
-                                  children: [
-                                    Expanded(
-                                      child: TextField(
-                                        key: const ValueKey('numerador2'),
-                                        controller: _numeradorController2,
-                                        textAlign: TextAlign.center,
-                                        keyboardType: TextInputType.number,
-                                        decoration: const InputDecoration(border: OutlineInputBorder(), hintText: '?'),
-                                      ),
-                                    ),
-                                    Text(' - ',style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
-                                    Expanded(
-                                      child: TextField(
-                                        key: const ValueKey('numerador3'),
-                                        controller: _numeradorController3,
-                                        textAlign: TextAlign.center,
-                                        keyboardType: TextInputType.number,
-                                        decoration: const InputDecoration(border: OutlineInputBorder(), hintText: '?'),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                                const Divider(color: Colors.black, thickness: 2, height: 10),
-                                TextField(
-                                  key: const ValueKey('denominador2'),
-                                  controller: _denominadorController2,
-                                  textAlign: TextAlign.center,
-                                  keyboardType: TextInputType.number,
-                                  decoration: const InputDecoration(border: OutlineInputBorder(), hintText: '?'),
-                                ),
-                              ],
-                            ),
-                          ),
-                          Padding(
-                            padding: EdgeInsets.symmetric(horizontal: 16.0),
-                            child: Text(')', style: TextStyle(fontSize: 60, fontWeight: FontWeight.bold)),
-                          ),
-                          Padding(
-                            padding: EdgeInsets.symmetric(horizontal: 16.0),
-                            child: Text('÷', style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold)),
-                          ),
-                          Column(
-                            children: const [
-                              Text('2', style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold)),
-                              SizedBox(width: 40, child: Divider(color: Colors.black, thickness: 2)),
-                              Text('5', style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold)),
-                            ],
-                          ),
-                        ],
-                      ),
-                      const SizedBox(height: 10,),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          SizedBox(
-                            width: 50,
-                            child: Column(
-                              children: [
-                                TextField(
-                                  key: const ValueKey('numerador1'),
-                                  controller: _numeradorController1,
-                                  textAlign: TextAlign.center,
-                                  keyboardType: TextInputType.number,
-                                  decoration: const InputDecoration(border: OutlineInputBorder(), hintText: '?'),
-                                ),
-                                const Divider(color: Colors.black, thickness: 2, height: 10),
-                                TextField(
-                                  key: const ValueKey('denominador1'),
-                                  controller: _denominadorController1,
-                                  textAlign: TextAlign.center,
-                                  keyboardType: TextInputType.number,
-                                  decoration: const InputDecoration(border: OutlineInputBorder(), hintText: '?'),
-                                ),
-                              ],
-                            ),
-                          ),
-                          Padding(
-                            padding: EdgeInsets.symmetric(horizontal: 16.0),
-                            child: Text('÷', style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold)),
-                          ),
-                          Column(
-                            children: const [
-                              Text('2', style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold)),
-                              SizedBox(width: 40, child: Divider(color: Colors.black, thickness: 2)),
-                              Text('5', style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold)),
-                            ],
-                          ),
-                          Padding(
-                            padding: EdgeInsets.symmetric(horizontal: 16.0),
-                            child: Text('=', style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold)),
-                          ),
-                          SizedBox(
-                            width: 50,
-                            child: Column(
-                              children: [
-                                TextField(
-                                  key: const ValueKey('numerador4'),
-                                  controller: _numeradorController4,
-                                  textAlign: TextAlign.center,
-                                  keyboardType: TextInputType.number,
-                                  decoration: const InputDecoration(border: OutlineInputBorder(), hintText: '?'),
-                                ),
-                                const Divider(color: Colors.black, thickness: 2, height: 10),
-                                TextField(
-                                  key: const ValueKey('denominador3'),
-                                  controller: _denominadorController3,
-                                  textAlign: TextAlign.center,
-                                  keyboardType: TextInputType.number,
-                                  decoration: const InputDecoration(border: OutlineInputBorder(), hintText: '?'),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ],
-                      )
-                    ],
+                        );
+                      }
+                    },
+                    style: TextButton.styleFrom(
+                      padding: const EdgeInsets.all(20),
+                      backgroundColor: Colors.green,
+                      foregroundColor: Colors.white,
+                    ),
+                    child:  const Text(
+                        'CONFIRMAR',
+                        style: TextStyle(
+                            fontSize: 30,
+                            fontWeight: FontWeight.bold
+                        )
+                    ),
                   ),
-                ),
-                const SizedBox(height: 20,),
-                TextButton(
-                  onPressed: () {
-                    final numRespuesta1 = _numeradorController1.text;
-                    final denRespuesta1 = _denominadorController1.text;
-                    final numRespuesta2 = _numeradorController2.text;
-                    final denRespuesta2 = _denominadorController2.text;
-                    final numRespuesta3 = _numeradorController3.text;
-                    final denRespuesta3 = _denominadorController3.text;
-                    final numRespuesta4 = _numeradorController4.text;
-
-
-
-                    if (
-                    numRespuesta1.isEmpty ||
-                        numRespuesta2.isEmpty ||
-                        numRespuesta3.isEmpty ||
-                        numRespuesta4.isEmpty ||
-                        denRespuesta1.isEmpty ||
-                        denRespuesta2.isEmpty ||
-                        denRespuesta3.isEmpty
-                    ) {
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        const SnackBar(
-                          content: Text('Por favor, completa la fracción.'),
-                          backgroundColor: Colors.orange,
-                        ),
-                      );
-                      return;
-                    }
-
-                    if (numRespuesta1 == _numeradorCorrecto1
-                        && numRespuesta2 == _numeradorCorrecto2
-                        && numRespuesta3 == _numeradorCorrecto3
-                        && numRespuesta4 == _numeradorCorrecto4
-                        && denRespuesta1 == _denominadorCorrecto1
-                        && denRespuesta2 == _denominadorCorrecto2
-                        && denRespuesta3 == _denominadorCorrecto3
-                    ) {
-                      _marcarCompletado();
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => const NivelSuperadoFracciones(
-                          siguienteNivel: AlgebraMenu(),
-                        )),
-                      );
-                    }
-                    else {
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        const SnackBar(
-                          content: Text('Respuesta incorrecta. ¡Inténtalo de nuevo!'),
-                          backgroundColor: Colors.red,
-                        ),
-                      );
-                    }
-                  },
-                  style: ButtonStyle(
-                    padding: const WidgetStatePropertyAll(EdgeInsets.all(10)),
-                    backgroundColor: WidgetStateColor.resolveWith((states) => Colors.green),
-                    foregroundColor: WidgetStateColor.resolveWith((states) => Colors.black),
-                  ),
-                  child:  const Text(
-                      'CONFIRMAR',
-                      style: TextStyle(
-                          fontSize: 30,
-                          fontWeight: FontWeight.bold
-                      )
-                  ),
-                ),
-                const SizedBox(height: 30,),
-              ],
+                  const SizedBox(height: 30,),
+                ],
+              ),
             ),
           ),
         ),

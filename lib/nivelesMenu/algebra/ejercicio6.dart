@@ -52,204 +52,208 @@ class _Ejercicio6State extends State<Ejercicio6> {
           ),
           title: const Text('Ejercicio 6'),
         ),
-        body: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Expanded(child: Image.asset('assets/images/profetxt.png')),
-              const SizedBox(height: 20,),
-              Text('el producto de ( - por - es + ) y (- por + es -)!'),
-              const SizedBox(height: 20,),
-              Container(
-                padding: EdgeInsets.all(10),
-                alignment: Alignment.topCenter,
-                height: 320,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
-                  color: Colors.white,
-                  border: Border.all(
-                    color: Colors.black,
-                    width: 2,
-                  ),
-                ),
-                child: Column(
-                  children: [
-                    Text('4(2y+1)-3(y-2)=9',style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text('(8y+4)-(',style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
-                        SizedBox(
-                          height: 30,
-                          width: 70,
-                          child: TextField(
-                            key: const ValueKey('numero1'),
-                            controller: _numeroController1,
-                            textAlign: TextAlign.center,
-                            keyboardType: TextInputType.number,
-                            decoration: InputDecoration(border: OutlineInputBorder(), hintText: '?',contentPadding: EdgeInsets.zero),
-                          ),
-                        ),
-                        Text(')=9',style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
-                      ],
+        body: Center(
+          child: SingleChildScrollView(
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Image.asset('assets/images/profetxt.png'),
+                  const SizedBox(height: 20,),
+                  Text('el producto de ( - por - es + ) y (- por + es -)!'),
+                  const SizedBox(height: 20,),
+                  Container(
+                    padding: EdgeInsets.all(10),
+                    alignment: Alignment.topCenter,
+                    height: 320,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      color: Colors.white,
+                      border: Border.all(
+                        color: Colors.black,
+                        width: 2,
+                      ),
                     ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
+                    child: Column(
                       children: [
-                        Text('8y+4-',style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
-                        SizedBox(
-                          height: 30,
-                          width: 30,
-                          child: TextField(
-                            key: const ValueKey('numero2'),
-                            controller: _numeroController2,
-                            textAlign: TextAlign.center,
-                            keyboardType: TextInputType.number,
-                            decoration: InputDecoration(border: OutlineInputBorder(), hintText: '?',contentPadding: EdgeInsets.zero),
-                          ),
-                        ),
-                        Text('+',style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
-                        SizedBox(
-                          height: 30,
-                          width: 30,
-                          child: TextField(
-                            key: const ValueKey('numero3'),
-                            controller: _numeroController3,
-                            textAlign: TextAlign.center,
-                            keyboardType: TextInputType.number,
-                            decoration: InputDecoration(border: OutlineInputBorder(), hintText: '?',contentPadding: EdgeInsets.zero),
-                          ),
-                        ),
-                        Text('=9',style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
-                      ],
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text('5y+10=9',style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
-                      ],
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text('5y=9-10=- ',style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
-                        SizedBox(
-                          height: 30,
-                          width: 30,
-                          child: TextField(
-                            key: const ValueKey('numero4'),
-                            controller: _numeroController4,
-                            textAlign: TextAlign.center,
-                            keyboardType: TextInputType.number,
-                            decoration: InputDecoration(border: OutlineInputBorder(), hintText: '?',contentPadding: EdgeInsets.zero),
-                          ),
-                        ),
-                      ],
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text('y=- ',style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold)),
-                        SizedBox(
-                          height: 70,
-                          width: 30,
-                          child: Column(
-                            children: [
-                              SizedBox(
-                                height: 30,
-                                width: 30,
-                                child: TextField(
-                                  key: const ValueKey('numero5'),
-                                  controller: _numeroController5,
-                                  textAlign: TextAlign.center,
-                                  keyboardType: TextInputType.number,
-                                  decoration: InputDecoration(border: OutlineInputBorder(), hintText: '?',contentPadding: EdgeInsets.zero),
-                                ),
+                        Text('4(2y+1)-3(y-2)=9',style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text('(8y+4)-(',style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
+                            SizedBox(
+                              height: 30,
+                              width: 70,
+                              child: TextField(
+                                key: const ValueKey('numero1'),
+                                controller: _numeroController1,
+                                textAlign: TextAlign.center,
+                                keyboardType: TextInputType.text, // Corregido a texto para escribir '3y-6'
+                                decoration: InputDecoration(border: OutlineInputBorder(), hintText: '?',contentPadding: EdgeInsets.zero),
                               ),
-                              const Divider(color: Colors.black, thickness: 2, height: 10),
-                              SizedBox(
-                                height: 30,
-                                width: 30,
-                                child: TextField(
-                                  key: const ValueKey('numero6'),
-                                  controller: _numeroController6,
-                                  textAlign: TextAlign.center,
-                                  keyboardType: TextInputType.number,
-                                  decoration: InputDecoration(border: OutlineInputBorder(), hintText: '?',contentPadding: EdgeInsets.zero),
-                                ),
+                            ),
+                            Text(')=9',style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
+                          ],
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text('8y+4-',style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
+                            SizedBox(
+                              height: 30,
+                              width: 30,
+                              child: TextField(
+                                key: const ValueKey('numero2'),
+                                controller: _numeroController2,
+                                textAlign: TextAlign.center,
+                                keyboardType: TextInputType.text, // Corregido a texto para escribir '3y'
+                                decoration: InputDecoration(border: OutlineInputBorder(), hintText: '?',contentPadding: EdgeInsets.zero),
                               ),
-                            ],
-                          ),
+                            ),
+                            Text('+',style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
+                            SizedBox(
+                              height: 30,
+                              width: 30,
+                              child: TextField(
+                                key: const ValueKey('numero3'),
+                                controller: _numeroController3,
+                                textAlign: TextAlign.center,
+                                keyboardType: TextInputType.number,
+                                decoration: InputDecoration(border: OutlineInputBorder(), hintText: '?',contentPadding: EdgeInsets.zero),
+                              ),
+                            ),
+                            Text('=9',style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
+                          ],
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text('5y+10=9',style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
+                          ],
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text('5y=9-10=- ',style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
+                            SizedBox(
+                              height: 30,
+                              width: 30,
+                              child: TextField(
+                                key: const ValueKey('numero4'),
+                                controller: _numeroController4,
+                                textAlign: TextAlign.center,
+                                keyboardType: TextInputType.number,
+                                decoration: InputDecoration(border: OutlineInputBorder(), hintText: '?',contentPadding: EdgeInsets.zero),
+                              ),
+                            ),
+                          ],
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text('y=- ',style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold)),
+                            SizedBox(
+                              height: 70,
+                              width: 30,
+                              child: Column(
+                                children: [
+                                  SizedBox(
+                                    height: 30,
+                                    width: 30,
+                                    child: TextField(
+                                      key: const ValueKey('numero5'),
+                                      controller: _numeroController5,
+                                      textAlign: TextAlign.center,
+                                      keyboardType: TextInputType.number,
+                                      decoration: InputDecoration(border: OutlineInputBorder(), hintText: '?',contentPadding: EdgeInsets.zero),
+                                    ),
+                                  ),
+                                  const Divider(color: Colors.black, thickness: 2, height: 10),
+                                  SizedBox(
+                                    height: 30,
+                                    width: 30,
+                                    child: TextField(
+                                      key: const ValueKey('numero6'),
+                                      controller: _numeroController6,
+                                      textAlign: TextAlign.center,
+                                      keyboardType: TextInputType.number,
+                                      decoration: InputDecoration(border: OutlineInputBorder(), hintText: '?',contentPadding: EdgeInsets.zero),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            )
+                          ],
                         )
                       ],
-                    )
-                  ],
-                ),
-              ),
-              const SizedBox(height: 20,),
-              TextButton(
-                onPressed: (){
-                  final numero1 = _numeroController1.text;
-                  final numero2 = _numeroController2.text;
-                  final numero3 = int.tryParse(_numeroController3.text);
-                  final numero4 = int.tryParse(_numeroController4.text);
-                  final numero5 = int.tryParse(_numeroController5.text);
-                  final numero6 = int.tryParse(_numeroController6.text);
+                    ),
+                  ),
+                  const SizedBox(height: 20,),
+                  TextButton(
+                    onPressed: (){
+                      final numero1 = _numeroController1.text;
+                      final numero2 = _numeroController2.text;
+                      final numero3 = int.tryParse(_numeroController3.text);
+                      final numero4 = int.tryParse(_numeroController4.text);
+                      final numero5 = int.tryParse(_numeroController5.text);
+                      final numero6 = int.tryParse(_numeroController6.text);
 
 
-                  if(numero1.isEmpty
-                      || numero2.isEmpty
-                      || numero3==null
-                      || numero4==null
-                      || numero5==null
-                      || numero6==null
-                  ){
-                    ScaffoldMessenger.of(context).showSnackBar(
-                      const SnackBar(
-                        content: Text('Por favor, completa el ejercicio.',style: TextStyle(fontSize: 20,),),
-                        backgroundColor: Colors.orange,
-                      ),
-                    );
-                    return;
-                  }
-                  if( numero1==numero1correcto
-                      && numero2==numero2correcto
-                      && numero3==numero3correcto
-                      && numero4==numero4correcto
-                      && numero5==numero5correcto
-                      && numero6==numero6correcto
-                  ){
-                    _marcarCompletado();
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const NivelSuperadoAlgebra(
-                        siguienteNivel: Ejercicio7(),
-                      )),
-                    );
-                  }
-                  else{
-                    ScaffoldMessenger.of(context).showSnackBar(
-                      const SnackBar(
-                        content: Text('Respuesta incorrecta. ¡Inténtalo de nuevo!'),
-                        backgroundColor: Colors.red,
-                      ),
-                    );
-                  }
-                },
-                style: ButtonStyle(
-                  padding: WidgetStatePropertyAll(EdgeInsets.all(20)),
-                  backgroundColor: WidgetStateColor.resolveWith((states) => Colors.green),
-                  foregroundColor: WidgetStateColor.resolveWith((states)=> Colors.black),
-                ),
-                child:Text('CONFIRMAR',style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                ),),
+                      if(numero1.isEmpty
+                          || numero2.isEmpty
+                          || numero3==null
+                          || numero4==null
+                          || numero5==null
+                          || numero6==null
+                      ){
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          const SnackBar(
+                            content: Text('Por favor, completa el ejercicio.',style: TextStyle(fontSize: 20,),),
+                            backgroundColor: Colors.orange,
+                          ),
+                        );
+                        return;
+                      }
+                      if( numero1==numero1correcto
+                          && numero2==numero2correcto
+                          && numero3==numero3correcto
+                          && numero4==numero4correcto
+                          && numero5==numero5correcto
+                          && numero6==numero6correcto
+                      ){
+                        _marcarCompletado();
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => const NivelSuperadoAlgebra(
+                            siguienteNivel: Ejercicio7(),
+                          )),
+                        );
+                      }
+                      else{
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          const SnackBar(
+                            content: Text('Respuesta incorrecta. ¡Inténtalo de nuevo!'),
+                            backgroundColor: Colors.red,
+                          ),
+                        );
+                      }
+                    },
+                    style: TextButton.styleFrom(
+                      padding: const EdgeInsets.all(20),
+                      backgroundColor: Colors.green,
+                      foregroundColor: Colors.white,
+                    ),
+                    child:Text('CONFIRMAR',style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),),
+                  ),
+                  const SizedBox(height: 30,),
+                ],
               ),
-              const SizedBox(height: 30,),
-            ],
+            ),
           ),
         ),
       ),

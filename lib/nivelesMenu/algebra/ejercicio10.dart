@@ -54,228 +54,231 @@ class _Ejercicio10State extends State<Ejercicio10> {
           ),
           title: const Text('Ejercicio 10'),
         ),
-        body: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              //Expanded(child: Image.asset('assets/images/profetxt.png')),
-              const SizedBox(height: 20,),
-              Text('un dato de ayuda -2x+5x es igual a 3x!'),
-              const SizedBox(height: 20,),
-              Container(
-                padding: EdgeInsets.all(10),
-                alignment: Alignment.topCenter,
-                height: 360,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
-                  color: Colors.white,
-                  border: Border.all(
-                    color: Colors.black,
-                    width: 2,
+        body: Center(
+          child: SingleChildScrollView(
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  const SizedBox(height: 20,),
+                  const Text('un dato de ayuda -2x+5x es igual a 3x!'),
+                  const SizedBox(height: 20,),
+                  Container(
+                    padding: const EdgeInsets.all(10),
+                    alignment: Alignment.topCenter,
+                    height: 360,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      color: Colors.white,
+                      border: Border.all(
+                        color: Colors.black,
+                        width: 2,
+                      ),
+                    ),
+                    child: Column(
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: const [
+                            Text('2x²+3x-5=0',style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),)
+                          ],
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            const Text('2x²-',style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
+                            SizedBox(
+                              height: 30,
+                              width: 30,
+                              child: TextField(
+                                key: const ValueKey('numero1'),
+                                controller: _numeroController1,
+                                textAlign: TextAlign.center,
+                                keyboardType: TextInputType.text,
+                                decoration: const InputDecoration(border: OutlineInputBorder(), hintText: '?',contentPadding: EdgeInsets.zero),
+                              ),
+                            ),
+                            const Text('+',style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
+                            SizedBox(
+                              height: 30,
+                              width: 30,
+                              child: TextField(
+                                key: const ValueKey('numero2'),
+                                controller: _numeroController2,
+                                textAlign: TextAlign.center,
+                                keyboardType: TextInputType.text,
+                                decoration: const InputDecoration(border: OutlineInputBorder(), hintText: '?',contentPadding: EdgeInsets.zero),
+                              ),
+                            ),
+                            const Text('-5=0',style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
+                          ],
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: const [
+                            Text('(2x²-2x)+(5x-5)=0',style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
+                          ],
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            SizedBox(
+                              height: 30,
+                              width: 30,
+                              child: TextField(
+                                key: const ValueKey('numero3'),
+                                controller: _numeroController3,
+                                textAlign: TextAlign.center,
+                                keyboardType: TextInputType.text,
+                                decoration: const InputDecoration(border: OutlineInputBorder(), hintText: '?',contentPadding: EdgeInsets.zero),
+                              ),
+                            ),
+                            const Text('(x-1)+',style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
+                            SizedBox(
+                              height: 30,
+                              width: 30,
+                              child: TextField(
+                                key: const ValueKey('numero4'),
+                                controller: _numeroController4,
+                                textAlign: TextAlign.center,
+                                keyboardType: TextInputType.number,
+                                decoration: const InputDecoration(border: OutlineInputBorder(), hintText: '?',contentPadding: EdgeInsets.zero),
+                              ),
+                            ),
+                            const Text('(x-1)=0',style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
+                          ],
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: const [
+                            Text('(2x-5)+(x-1)=0',style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
+                          ],
+                        ),
+                        Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: const [
+                              Text('2x-5=0            x-1=0',style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),)
+                            ]
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+
+                            const Text('x₁=',style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
+                            SizedBox(
+                              height: 70,
+                              width: 30,
+                              child: Column(
+                                children: [
+                                  SizedBox(
+                                    height: 30,
+                                    width: 30,
+                                    child: TextField(
+                                      key: const ValueKey('numero5'),
+                                      controller: _numeroController5,
+                                      textAlign: TextAlign.center,
+                                      keyboardType: TextInputType.number,
+                                      decoration: const InputDecoration(border: OutlineInputBorder(), hintText: '?',contentPadding: EdgeInsets.zero),
+                                    ),
+                                  ),
+                                  const Divider(color: Colors.black, thickness: 2, height: 10),
+                                  SizedBox(
+                                    height: 30,
+                                    width: 30,
+                                    child: TextField(
+                                      key: const ValueKey('numero6'),
+                                      controller: _numeroController6,
+                                      textAlign: TextAlign.center,
+                                      keyboardType: TextInputType.number,
+                                      decoration: const InputDecoration(border: OutlineInputBorder(), hintText: '?',contentPadding: EdgeInsets.zero),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            const Text('              x₂=',style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
+                            SizedBox(
+                              height: 30,
+                              width: 30,
+                              child: TextField(
+                                key: const ValueKey('numero7'),
+                                controller: _numeroController7,
+                                textAlign: TextAlign.center,
+                                keyboardType: TextInputType.number,
+                                decoration: const InputDecoration(border: OutlineInputBorder(), hintText: '?',contentPadding: EdgeInsets.zero),
+                              ),
+                            ),
+                          ],
+                        )
+                      ],
+                    ),
                   ),
-                ),
-                child: Column(
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text('2x²+3x-5=0',style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),)
-                      ],
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text('2x²-',style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
-                        SizedBox(
-                          height: 30,
-                          width: 30,
-                          child: TextField(
-                            key: const ValueKey('numero1'),
-                            controller: _numeroController1,
-                            textAlign: TextAlign.center,
-                            keyboardType: TextInputType.text,
-                            decoration: InputDecoration(border: OutlineInputBorder(), hintText: '?',contentPadding: EdgeInsets.zero),
-                          ),
-                        ),
-                        Text('+',style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
-                        SizedBox(
-                          height: 30,
-                          width: 30,
-                          child: TextField(
-                            key: const ValueKey('numero2'),
-                            controller: _numeroController2,
-                            textAlign: TextAlign.center,
-                            keyboardType: TextInputType.text,
-                            decoration: InputDecoration(border: OutlineInputBorder(), hintText: '?',contentPadding: EdgeInsets.zero),
-                          ),
-                        ),
-                        Text('-5=0',style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
-                      ],
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text('(2x²-2x)+(5x-5)=0',style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
-                      ],
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        SizedBox(
-                          height: 30,
-                          width: 30,
-                          child: TextField(
-                            key: const ValueKey('numero3'),
-                            controller: _numeroController3,
-                            textAlign: TextAlign.center,
-                            keyboardType: TextInputType.text,
-                            decoration: InputDecoration(border: OutlineInputBorder(), hintText: '?',contentPadding: EdgeInsets.zero),
-                          ),
-                        ),
-                        Text('(x-1)+',style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
-                        SizedBox(
-                          height: 30,
-                          width: 30,
-                          child: TextField(
-                            key: const ValueKey('numero4'),
-                            controller: _numeroController4,
-                            textAlign: TextAlign.center,
-                            keyboardType: TextInputType.number,
-                            decoration: InputDecoration(border: OutlineInputBorder(), hintText: '?',contentPadding: EdgeInsets.zero),
-                          ),
-                        ),
-                        Text('(x-1)=0',style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
-                      ],
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text('(2x-5)+(x-1)=0',style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
-                      ],
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text('2x-5=0            x-1=0',style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),)
-                      ]
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
+                  const SizedBox(height: 20,),
+                  TextButton(
+                    onPressed: (){
+                      final numero1 = _numeroController1.text;
+                      final numero2 = _numeroController2.text;
+                      final numero3 = _numeroController3.text;
+                      final numero4 = int.tryParse(_numeroController4.text);
+                      final numero5 = int.tryParse(_numeroController5.text);
+                      final numero6 = int.tryParse(_numeroController6.text);
+                      final numero7 = int.tryParse(_numeroController7.text);
 
-                        Text('x₁=',style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
-                        SizedBox(
-                          height: 70,
-                          width: 30,
-                          child: Column(
-                            children: [
-                              SizedBox(
-                                height: 30,
-                                width: 30,
-                                child: TextField(
-                                  key: const ValueKey('numero5'),
-                                  controller: _numeroController5,
-                                  textAlign: TextAlign.center,
-                                  keyboardType: TextInputType.number,
-                                  decoration: InputDecoration(border: OutlineInputBorder(), hintText: '?',contentPadding: EdgeInsets.zero),
-                                ),
-                              ),
-                              const Divider(color: Colors.black, thickness: 2, height: 10),
-                              SizedBox(
-                                height: 30,
-                                width: 30,
-                                child: TextField(
-                                  key: const ValueKey('numero6'),
-                                  controller: _numeroController6,
-                                  textAlign: TextAlign.center,
-                                  keyboardType: TextInputType.number,
-                                  decoration: InputDecoration(border: OutlineInputBorder(), hintText: '?',contentPadding: EdgeInsets.zero),
-                                ),
-                              ),
-                            ],
+
+
+                      if(numero1.isEmpty
+                          || numero2.isEmpty
+                          || numero3.isEmpty
+                          || numero4==null
+                          || numero5==null
+                          || numero6==null
+                          || numero7==null
+                      ){
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          const SnackBar(
+                            content: Text('Por favor, completa el ejercicio.',style: TextStyle(fontSize: 20,),),
+                            backgroundColor: Colors.orange,
                           ),
-                        ),
-                        Text('              x₂=',style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
-                        SizedBox(
-                          height: 30,
-                          width: 30,
-                          child: TextField(
-                            key: const ValueKey('numero7'),
-                            controller: _numeroController7,
-                            textAlign: TextAlign.center,
-                            keyboardType: TextInputType.number,
-                            decoration: InputDecoration(border: OutlineInputBorder(), hintText: '?',contentPadding: EdgeInsets.zero),
+                        );
+                        return;
+                      }
+                      if( numero1==numero1correcto
+                          && numero2==numero2correcto
+                          && numero3==numero3correcto
+                          && numero4==numero4correcto
+                          && numero5==numero5correcto
+                          && numero6==numero6correcto
+                      ){
+                        _marcarCompletado();
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => const Final()),
+                        );
+                      }
+                      else{
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          const SnackBar(
+                            content: Text('Respuesta incorrecta. ¡Inténtalo de nuevo!'),
+                            backgroundColor: Colors.red,
                           ),
-                        ),
-                      ],
-                    )
-                  ],
-                ),
+                        );
+                      }
+                    },
+                    style: TextButton.styleFrom(
+                      padding: const EdgeInsets.all(20),
+                      backgroundColor: Colors.green,
+                      foregroundColor: Colors.white,
+                    ),
+                    child:const Text('CONFIRMAR',style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),),
+                  ),
+                ],
               ),
-              const SizedBox(height: 20,),
-              TextButton(
-                onPressed: (){
-                  final numero1 = _numeroController1.text;
-                  final numero2 = _numeroController2.text;
-                  final numero3 = _numeroController3.text;
-                  final numero4 = int.tryParse(_numeroController4.text);
-                  final numero5 = int.tryParse(_numeroController5.text);
-                  final numero6 = int.tryParse(_numeroController6.text);
-                  final numero7 = int.tryParse(_numeroController7.text);
-
-
-
-                  if(numero1.isEmpty
-                      || numero2.isEmpty
-                      || numero3.isEmpty
-                      || numero4==null
-                      || numero5==null
-                      || numero6==null
-                      || numero7==null
-                  ){
-                    ScaffoldMessenger.of(context).showSnackBar(
-                      const SnackBar(
-                        content: Text('Por favor, completa el ejercicio.',style: TextStyle(fontSize: 20,),),
-                        backgroundColor: Colors.orange,
-                      ),
-                    );
-                    return;
-                  }
-                  if( numero1==numero1correcto
-                      && numero2==numero2correcto
-                      && numero3==numero3correcto
-                      && numero4==numero4correcto
-                      && numero5==numero5correcto
-                      && numero6==numero6correcto
-                  ){
-                    _marcarCompletado();
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const Final()),
-                    );
-                  }
-                  else{
-                    ScaffoldMessenger.of(context).showSnackBar(
-                      const SnackBar(
-                        content: Text('Respuesta incorrecta. ¡Inténtalo de nuevo!'),
-                        backgroundColor: Colors.red,
-                      ),
-                    );
-                  }
-                },
-                style: ButtonStyle(
-                  padding: WidgetStatePropertyAll(EdgeInsets.all(20)),
-                  backgroundColor: WidgetStateColor.resolveWith((states) => Colors.green),
-                  foregroundColor: WidgetStateColor.resolveWith((states)=> Colors.black),
-                ),
-                child:Text('CONFIRMAR',style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                ),),
-              ),
-            ],
+            ),
           ),
         ),
       ),

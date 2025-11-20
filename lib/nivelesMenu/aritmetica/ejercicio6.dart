@@ -49,12 +49,12 @@ class _Ejercicio6State extends State<Ejercicio6> {
               Container(
                 padding: const EdgeInsets.all(10),
                 child: const Text(
-                  '17 - 4 + 8 - 4 =',
+                  '(9 × 3) + 6 =',
                   style: TextStyle(fontSize: 30,
                       fontWeight: FontWeight.bold),
                 ),
                 decoration: BoxDecoration(
-                  color: Colors.black12,
+                  color: Colors.white,
                   borderRadius: BorderRadius.circular(10),
                   border: Border.all(
                       color: Colors.black,
@@ -69,7 +69,7 @@ class _Ejercicio6State extends State<Ejercicio6> {
                 child: Wrap(
                   alignment: WrapAlignment.center,
                   spacing: 8,
-                  children: ['5', '12', '9', '17'].map((valor) {
+                  children: ['22', '12', '33', '17'].map((valor) {
                     return ChoiceChip(
                       label: Text(valor, style: const TextStyle(fontSize: 20)),
                       selected: _resultadoSeleccionado == valor,

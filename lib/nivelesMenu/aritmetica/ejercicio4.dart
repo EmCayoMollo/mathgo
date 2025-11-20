@@ -55,7 +55,7 @@ class _Ejercicio4State extends State<Ejercicio4> {
                         fontWeight: FontWeight.bold),
                   ),
                   decoration: BoxDecoration(
-                    color: Colors.black12,
+                    color: Colors.white,
                     borderRadius: BorderRadius.circular(10),
                     border: Border.all(
                         color: Colors.black,

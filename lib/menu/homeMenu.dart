@@ -123,7 +123,7 @@ class HomeMenu extends StatelessWidget {
           height: 170,
           padding: EdgeInsets.zero,
           child: Image.asset(
-            'assets/images/pieP.png',
+            'assets/images/pie2.png',
             fit: BoxFit.fitWidth,
           ),
         ),

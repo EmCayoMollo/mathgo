@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:mathgo/nivelesMenu/aritmetica/aritmeticaMenu.dart';
 import 'package:mathgo/nivelesMenu/nivelesMenu.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
-class NivelSuperado extends StatelessWidget {
+class NivelSuperado extends StatefulWidget {
   final Widget siguienteNivel;
 
   const NivelSuperado({
@@ -12,13 +13,33 @@ class NivelSuperado extends StatelessWidget {
   });
 
   @override
+  State<NivelSuperado> createState() => _NivelSuperadoState();
+}
+
+class _NivelSuperadoState extends State<NivelSuperado> {
+  String nombreUsuario = '';
+
+  @override
+  void initState() {
+    super.initState();
+    _cargarNombre();
+  }
+
+  Future<void> _cargarNombre() async {
+    final prefs = await SharedPreferences.getInstance();
+    setState(() {
+      nombreUsuario = prefs.getString('nombreUsuario') ?? '';
+    });
+  }
+
+  @override
   Widget build(BuildContext context) {
     return PopScope(
       canPop: false,
       onPopInvokedWithResult: (bool didPop,dynamic result){},
       child: Scaffold(
         body: Container(
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
               image: DecorationImage(
                 image:AssetImage('assets/images/fondo.png'),
                 fit: BoxFit.cover,
@@ -29,10 +50,10 @@ class NivelSuperado extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Expanded(child: Lottie.asset('assets/lottie/heart.json',animate: true)),
-                const Text(
-                  'Nivel Superado',
+                Text(
+                  'Superaste el nivel $nombreUsuario',
                   textAlign: TextAlign.center,
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontFamily: 'Permanent Marker',
                     fontSize: 55,
                     height: 1,
@@ -50,7 +71,7 @@ class NivelSuperado extends StatelessWidget {
                   onPressed: () {
                     Navigator.pushReplacement(
                       context,
-                      MaterialPageRoute(builder: (context) => siguienteNivel),
+                      MaterialPageRoute(builder: (context) => widget.siguienteNivel),
                     );
                   },
                   child: const Text(

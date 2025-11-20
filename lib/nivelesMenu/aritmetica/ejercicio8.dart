@@ -49,12 +49,12 @@ class _Ejercicio8State extends State<Ejercicio8> {
               Container(
                 padding: const EdgeInsets.all(10),
                 child: const Text(
-                  '17 - 4 + 8 - 4 =',
+                  '(15-3)× 2 =',
                   style: TextStyle(fontSize: 30,
                       fontWeight: FontWeight.bold),
                 ),
                 decoration: BoxDecoration(
-                  color: Colors.black12,
+                  color: Colors.white,
                   borderRadius: BorderRadius.circular(10),
                   border: Border.all(
                       color: Colors.black,

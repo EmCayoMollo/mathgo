@@ -14,7 +14,7 @@ class Ejercicio7 extends StatefulWidget {
 
 class _Ejercicio7State extends State<Ejercicio7> {
   String? _resultadoSeleccionado;
-  final String _resultadoCorrecto= '17';
+  final String _resultadoCorrecto= '14';
   Future<void> _marcarCompletado() async{
     final prefs = await SharedPreferences.getInstance();
     await prefs.setBool('ejercicio7', true);
@@ -49,12 +49,12 @@ class _Ejercicio7State extends State<Ejercicio7> {
               Container(
                 padding: const EdgeInsets.all(10),
                 child: const Text(
-                  '17 - 4 + 8 - 4 =',
+                  '28 ÷ 4 +7 =',
                   style: TextStyle(fontSize: 30,
                       fontWeight: FontWeight.bold),
                 ),
                 decoration: BoxDecoration(
-                  color: Colors.black12,
+                  color: Colors.white,
                   borderRadius: BorderRadius.circular(10),
                   border: Border.all(
                       color: Colors.black,
@@ -69,7 +69,7 @@ class _Ejercicio7State extends State<Ejercicio7> {
                 child: Wrap(
                   alignment: WrapAlignment.center,
                   spacing: 8,
-                  children: ['5', '12', '9', '17'].map((valor) {
+                  children: ['5', '14', '9', '17'].map((valor) {
                     return ChoiceChip(
                       label: Text(valor, style: const TextStyle(fontSize: 20)),
                       selected: _resultadoSeleccionado == valor,

@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:mathgo/nivelesMenu/algebra/algebraMenu.dart';
 import 'package:mathgo/nivelesMenu/nivelesMenu.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
-class NivelSuperadoAlgebra extends StatelessWidget {
+class NivelSuperadoAlgebra extends StatefulWidget {
   final Widget siguienteNivel;
 
   const NivelSuperadoAlgebra({
@@ -12,13 +13,33 @@ class NivelSuperadoAlgebra extends StatelessWidget {
   });
 
   @override
+  State<NivelSuperadoAlgebra> createState() => _NivelSuperadoAlgebraState();
+}
+
+class _NivelSuperadoAlgebraState extends State<NivelSuperadoAlgebra> {
+  String nombreUsuario = '';
+
+  @override
+  void initState() {
+    super.initState();
+    _cargarNombre();
+  }
+
+  Future<void> _cargarNombre() async {
+    final prefs = await SharedPreferences.getInstance();
+    setState(() {
+      nombreUsuario = prefs.getString('nombreUsuario') ?? '';
+    });
+  }
+
+  @override
   Widget build(BuildContext context) {
     return PopScope(
       canPop: false,
       onPopInvokedWithResult: (bool didPop,dynamic result){},
       child: Scaffold(
         body: Container(
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
               image: DecorationImage(
                 image:AssetImage('assets/images/fondo.png'),
                 fit: BoxFit.cover,
@@ -29,10 +50,10 @@ class NivelSuperadoAlgebra extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Expanded(child: Lottie.asset('assets/lottie/heart.json',animate: true)),
-                const Text(
-                  'Nivel Superado',
+                Text(
+                  'Nivel Superado $nombreUsuario',
                   textAlign: TextAlign.center,
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontFamily: 'Permanent Marker',
                     fontSize: 55,
                     height: 1,
@@ -50,7 +71,7 @@ class NivelSuperadoAlgebra extends StatelessWidget {
                   onPressed: () {
                     Navigator.pushReplacement(
                       context,
-                      MaterialPageRoute(builder: (context) => siguienteNivel),
+                      MaterialPageRoute(builder: (context) => widget.siguienteNivel),
                     );
                   },
                   child: const Text(
